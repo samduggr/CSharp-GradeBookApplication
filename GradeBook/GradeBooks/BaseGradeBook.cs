@@ -13,6 +13,7 @@ namespace GradeBook.GradeBooks
     {
         public string Name { get; set; }
         public List<Student> Students { get; set; }
+        public GradeBookType Type { get; set; }
 
         public BaseGradeBook(string name)
         {
@@ -116,6 +117,8 @@ namespace GradeBook.GradeBooks
                     return 2;
                 case 'D':
                     return 1;
+                case 'F':
+                    return 0;
             }
             return 0;
         }
