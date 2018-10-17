@@ -42,8 +42,32 @@ namespace GradeBook.GradeBooks
             {
                 return 'F';
             }
+        }
+
+        public override void CalculateStatistics()
+        {
+            if (Students.Count < 5)
+                throw new InvalidOperationException("Ranking grading requires at least 5students with grades in order to properly calculate a student's overall grade.");
+
+            if (Students.Count > 5)
+            {
+                base.CalculateStatistics();
+            }
 
             
         }
+
+        public override void CalculateStudentStatistics(string name)
+        {
+            if (Students.Count < 5)
+                throw new InvalidOperationException("Ranking grading requires at least 5students with grades in order to properly calculate a student's overall grade.");
+
+            if (Students.Count > 5)
+            {
+                base.CalculateStudentStatistics(name);
+            }
+            
+        }
+
     }
 }
