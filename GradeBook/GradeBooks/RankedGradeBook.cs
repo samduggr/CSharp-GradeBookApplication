@@ -52,10 +52,8 @@ namespace GradeBook.GradeBooks
                 return;
             }
 
-            if (Students.Count > 5)
-            {
-                base.CalculateStatistics();
-            }
+            base.CalculateStatistics();
+            
 
             
         }
@@ -69,11 +67,8 @@ namespace GradeBook.GradeBooks
             }
                 
 
-            if (Students.Count > 5)
-            {
-                base.CalculateStudentStatistics(name);
-            }
-            
+             base.CalculateStudentStatistics(name);
+                       
         }
 
     }
