@@ -27,7 +27,10 @@ namespace GradeBook.UserInterfaces
             else if (command == "quit")
                 Quit = true;
             else
+            {
                 Console.WriteLine("{0} was not recognized, please try again.", command);
+
+            }
         }
 
         public static void CreateCommand(string command)
@@ -55,7 +58,7 @@ namespace GradeBook.UserInterfaces
                 return;
             }
             //BaseGradeBook gradeBook = new BaseGradeBook(name);
-            //Console.WriteLine("Created gradebook {0}.", name);
+            Console.WriteLine("Created gradebook {0}.", name);
             GradeBookUserInterface.CommandLoop(gradeBook);
         }
 
@@ -80,7 +83,7 @@ namespace GradeBook.UserInterfaces
         {
             Console.WriteLine("GradeBook accepts the following commands:");
             Console.WriteLine();
-            Console.WriteLine("Create 'Name' 'Type' - Creates a new gradebook where 'Name' is the name of the gradebook.");
+            Console.WriteLine("Create 'Name' 'Type' - Creates a new gradebook where 'Name' is the name of the gradebook and 'Type' is what type of grading it should use.");
             Console.WriteLine();
             Console.WriteLine("Load 'Name' - Loads the gradebook with the provided 'Name'.");
             Console.WriteLine();
